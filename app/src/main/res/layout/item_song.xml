@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400px"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="50px">
+
+
+
+    <TextView
+        android:id="@+id/tvAlbum"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <ImageView
+        android:id="@id/idIvPoster"
+        android:layout_width="match_parent"
+        android:layout_height="400px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAlbum"
+        app:layout_constraintBottom_toTopOf="@+id/viewBottomShape"/>
+
+    <LinearLayout
+        android:id="@+id/viewBottomShape"
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/idIvPoster"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#484d59">
+
+        <TextView
+            android:id="@+id/idTvLabel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="4px"
+            android:paddingEnd="8px"
+            android:paddingStart="8px"
+            android:paddingTop="4px"
+            android:textColor="#fafafa"
+            android:maxLines="2"
+            android:ellipsize="marquee"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/idIvPoster"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
